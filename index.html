@@ -1,51 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="JavaScript/script.js" defer></script>
 </head>
+
 <body>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+    <!-- FRONT and BACK CARD'S -->
+    <div class="design_card_container">
+        <div class="front_card_container">
+            <!-- Insert image (front card) from CSS -->
+            <div class="circle">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+            </div>
+            <div id="card_number_insert">
+                <!-- create 'span' from Javascript when type in input -->
+            </div>
+            <div id="cardholder_name_insert">
+                <!-- create 'span' from Javascript when type in input -->
+            </div>
+            <div id="expiration_card_insert">
+                <!-- create 'span' from Javascript when type in input -->
+            </div>
+        </div>
 
-  000
+        <div class="back_card_container">
+            <!-- Insert image (back card) from CSS -->
+            <div id="cvc_card_insert">
+                <!-- create 'span' from Javascript when type in input -->
+            </div>
+        </div>
+    </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+    <div class="form_input_container">
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+        <div class="field_container" id="cardholder-container">
+            <label class="label_section" for="cardholdername">Cardholder Name</label><br>
+            <input class="field_input" type="text" id="cardholder-name" placeholder="e.g. Jane Appleseed">
+            <div id="cardholder-error" style="color: red;"></div>
+        </div>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+        <div class="field_container" id="cardnumber-container">
+            <label class="label_section" for="cardnumber">Card Number</label><br>
+            <input class="field_input" type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+            <div id="card-number-error" style="color: red;"></div>
+        </div>
 
-  CVC
-  e.g. 123
+        <div class="field_container" id="expiration-cvc-container">
+            <div id="expiration-container">
+                <label class="label_section" for="expirationcard">Exp. Date (MM/YY)</label><br>
+                <input class="field_input" type="text" id="month-expiration" placeholder="MM" maxlength="2">
+                <input class="field_input" type="text" id="year-expiration" placeholder="YY" maxlength="2">
+                <div id="card-expiration-error" style="color: red;"></div>
+            </div>
 
-  Confirm
+            <div class="field_container" id="validation-container">
+                <label class="label_section" for="validation">CVC</label><br>
+                <input class="field_input" type="text" id="validation" placeholder="e.g. 123" maxlength="3">
+                <div id="card-validation-error" style="color: red;"></div>
+            </div>
+        </div>
+        <button id="confirm-btn" class="confirm_btn">Confirm</button>
+    </div>
 
-  <!-- Completed state start -->
+    <div class="thanks_container">
 
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    </div>
 </body>
+
 </html>
